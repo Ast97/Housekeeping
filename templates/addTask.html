@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ADD TASK</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <nav>
+  <ul>
+    <li style="font-size:24px;color: whitesmoke; padding: 14px; letter-spacing:0.1em">Housekeeping</li>
+    <li style="float:right"><a href="{{ url_for('alloc_task') }}">Allocate Tasks</a>
+      <li style="float:right"><a href="{{ url_for('new_worker') }}">Add Worker</a>
+      <li style="float:right"><a href="{{ url_for('new_asset') }}">Add Asset</a>
+  </ul>
+</nav>
+<section class="content">
+    <form action = "{{ url_for('addtask') }}" method = "POST">
+         <h3>ADD NEW TASK</h3>
+         Task ID<br>
+         <input type = "text" name = "taskId"></br>
+         
+         Name<br>
+         <input type = "text" name = "taskName"><br>
+
+         Frequency<br>
+         <input type="text" name="frequency"><br>
+         <input type = "submit" value = "SUBMIT" /><br>
+      </form>
+</body>
+</html>

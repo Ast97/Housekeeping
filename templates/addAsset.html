@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ADD ASSET</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<nav>
+  <ul>
+    <li style="font-size:24px;color: whitesmoke; padding: 14px; letter-spacing:0.1em">Housekeeping</li>
+    <li style="float:right"><a href="{{ url_for('alloc_task') }}">Allocate Tasks</a>
+      <li style="float:right"><a href="{{ url_for('new_worker') }}">Add Worker</a>
+      <li style="float:right"><a href="{{ url_for('new_task') }}">Add Task</a>
+  </ul>
+</nav>
+<section class="content">
+
+    <form action = "{{ url_for('addasset') }}" method = "POST">
+         <h3>ADD NEW ASSET</h3>
+         Asset ID<br>
+         <input type = "text" name = "assetId" /></br>
+        
+         Name<br>
+         <input type = "text" name = "assetName" /><br>
+         <input type = "submit" value = "SUBMIT" /><br>
+      </form>
+    </section>
+</body>
+</html>

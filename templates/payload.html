@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ALLOCATE TASKS</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+	<nav>
+  <ul>
+    <li style="font-size:24px;color: whitesmoke; padding: 14px; letter-spacing:0.1em">Housekeeping</li>
+  </ul>
+</nav>
+<section class="content">
+    <form action = "{{ url_for('alloc') }}" method = "POST">
+         <h3>ALLOCATE TASKS</h3>
+         Asset ID<br>
+         <input type = "text" name = "assetId" /></br>
+
+         Task ID<br>
+         <input type = "text" name = "taskId" /></br>
+
+         Worker ID<br>
+         <input type = "text" name = "workerId" /></br>
+        
+         Time of Allocation<br>
+         <input type = "date" name = "timeOfAllocation" /><br>
+
+         Task to be Performed By<br>
+         <input type = "date" name = "taskToBePerformedBy" /><br>
+
+         <input type = "submit" value = "SUBMIT" /><br>
+      </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><link rel="stylesheet" href="/static/style.css"></head>
+   <body>
+    <nav>
+  <ul>
+    <li style="font-size:24px;color: whitesmoke; padding: 14px; letter-spacing:0.1em">Housekeeping</li>
+  </ul>
+</nav>
+<section class="content">
+      <table border = 1>
+            <th>Asset Id</th>
+            <th>Name></th>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["assetId"]}}</td>
+               <td>{{row["assetName"]}}</td> 
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+   </body>
+</html>
